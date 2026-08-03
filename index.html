@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
       <span>AVANYU<b>.CLOUD</b></span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#capabilities">Capabilities</a><a href="#plans">Plans</a><a href="#custom">Custom build</a><a href="#trust">Trust</a>
+      <a href="#water">Water conditions</a><a href="#capabilities">Capabilities</a><a href="#plans">Plans</a><a href="#trust">Trust</a>
     </nav>
     <a class="nav-cta" href="#contact">Design my cloud</a>
   </header>
@@ -38,6 +39,23 @@
         <div class="core"><span>AVANYU</span><b>CLOUD</b></div>
         <div class="satellite s1">EDGE</div><div class="satellite s2">DATA</div><div class="satellite s3">AI</div><div class="satellite s4">BACKUP</div>
       </div>
+    </section>
+
+    <section id="water" class="section water-section">
+      <div class="section-head water-head"><div><p class="eyebrow">Avanyu Water Intelligence · New Mexico</p><h2>The living water map.</h2></div><div><p>One operational view of drought, rivers, tributaries, reservoirs, lakes, springs, and live USGS streamflow observations across New Mexico.</p><p class="as-of"><span class="live-dot"></span><b id="waterStatus">Loading current observations…</b><br><span id="waterTimestamp">Connecting to USGS Water Services</span></p></div></div>
+      <div class="water-kpis" aria-label="New Mexico water condition summary">
+        <article><span>ACTIVE STREAM GAGES</span><b id="gageCount">—</b><small>USGS discharge observations</small></article><article><span>MEDIAN OBSERVED FLOW</span><b id="medianFlow">—</b><small>cubic feet per second</small></article><article><span>WATER FEATURES</span><b id="featureCount">—</b><small>reference features mapped</small></article><article><span>DROUGHT LAYER</span><b>D0–D4</b><small>USDM classification key</small></article>
+      </div>
+      <div class="water-console">
+        <aside class="map-sidebar">
+          <div class="map-control-group"><p class="control-title">VISIBLE LAYERS</p><label><input type="checkbox" data-layer="drought" checked><i class="key-dot drought-key"></i> Current drought extent</label><label><input type="checkbox" data-layer="rivers" checked><i class="key-line river-key"></i> Rivers & tributaries</label><label><input type="checkbox" data-layer="reservoirs" checked><i class="key-dot reservoir-key"></i> Reservoirs & lakes</label><label><input type="checkbox" data-layer="springs" checked><i class="key-dot spring-key"></i> Springs</label><label><input type="checkbox" data-layer="gages" checked><i class="key-dot gage-key"></i> Live stream gages</label></div>
+          <div class="map-control-group"><p class="control-title">DROUGHT SEVERITY</p><div class="drought-scale"><span><i class="d0"></i>D0 Abnormally dry</span><span><i class="d1"></i>D1 Moderate</span><span><i class="d2"></i>D2 Severe</span><span><i class="d3"></i>D3 Extreme</span><span><i class="d4"></i>D4 Exceptional</span></div></div>
+          <div class="map-control-group basins"><p class="control-title">QUICK BASIN VIEW</p><button data-basin="state">Statewide</button><button data-basin="rio-grande">Rio Grande</button><button data-basin="pecos">Pecos</button><button data-basin="san-juan">San Juan</button><button data-basin="canadian">Canadian</button></div>
+          <div class="selected-feature" id="featurePanel"><span>MAP INSPECTOR</span><h3>Select a feature</h3><p>Click a river, water body, spring, or stream gage for details and source information.</p></div>
+        </aside>
+        <div class="map-stage"><div id="waterMap" role="application" aria-label="Interactive map of New Mexico water conditions"></div><div class="map-badge">AVANYU · WATER CONDITIONS</div></div>
+      </div>
+      <div class="water-notes"><p><b>Operational context, not a regulatory determination.</b> USGS instantaneous readings are provisional and subject to revision. Reference water features are generalized for statewide visualization.</p><div><a href="https://waterdata.usgs.gov/state/new-mexico/" target="_blank" rel="noopener">USGS New Mexico Water Data ↗</a><a href="https://droughtmonitor.unl.edu/CurrentMap/StateDroughtMonitor.aspx?NM" target="_blank" rel="noopener">U.S. Drought Monitor ↗</a></div></div>
     </section>
 
     <section id="capabilities" class="section">
@@ -85,6 +103,7 @@
   </main>
 
   <footer><span>AVANYU.CLOUD</span><span>NEW MEXICO INTELLIGENCE · GLOBAL REACH</span><span>HOST · PROTECT · OPERATE · 2026</span></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="script.js"></script>
 </body>
 </html>
