@@ -20,7 +20,7 @@
       <span>AVANYU<b>.CLOUD</b></span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#water">Water intelligence</a><a href="#capabilities">Platform</a><a href="#plans">Engagements</a><a href="#trust">Trust</a>
+      <a href="#water">Water intelligence</a><a href="#capabilities">Platform</a><a href="#plans">Engagements</a><a href="#secure-ops">Secure Ops</a><a href="#trust">Trust</a>
     </nav>
     <a class="nav-cta" href="#contact">Design the system</a>
   </header>
@@ -89,6 +89,24 @@
         <button class="button primary" type="submit">Create my water system brief</button>
         <output id="builderOutput" aria-live="polite"></output>
       </form>
+    </section>
+
+
+    <section id="secure-ops" class="section secure-ops">
+      <div class="section-head"><div><p class="eyebrow">Release assurance · domain control · operational readiness</p><h2>SECURE OPS.</h2></div><p>The operational gate for moving water intelligence services from source control to dependable public availability—without losing security, evidence, or the path back.</p></div>
+      <div class="ops-status" aria-label="Website cutover status">
+        <article><span>PRODUCTION TARGET</span><b>avanyu.cloud</b><small>CNAME present on main</small></article>
+        <article><span>RELEASE CHANNEL</span><b>GitHub Pages</b><small>Verify main / repository root</small></article>
+        <article><span>CONTROL STATE</span><b class="ops-verify">VERIFY</b><small>DNS · TLS · HTTP 200</small></article>
+        <article><span>RECOVERY</span><b>Git history</b><small>Known-good rollback point required</small></article>
+      </div>
+      <div class="ops-grid">
+        <article><span>01 / RELEASE</span><h3>Confirm the payload</h3><ul><li>Record intended page and commit SHA</li><li>Verify CNAME and Pages source</li><li>Assign launch and rollback ownership</li></ul></article>
+        <article><span>02 / CUTOVER</span><h3>Secure the route</h3><ul><li>Validate apex and www DNS records</li><li>Remove conflicting records or forwarding</li><li>Enforce HTTPS after certificate issuance</li></ul></article>
+        <article><span>03 / AVAILABILITY</span><h3>Prove the system</h3><ul><li>Require HTTPS 200 and clean redirects</li><li>Test Leaflet, map tiles, USGS, CSS, and JS</li><li>Run desktop, mobile, CTA, and console checks</li></ul></article>
+        <article><span>04 / OPERATE</span><h3>Watch and recover</h3><ul><li>Monitor feeds, maps, uptime, and certificates</li><li>Document degraded-mode behavior</li><li>Retain and test the rollback commit</li></ul></article>
+      </div>
+      <div class="ops-gate"><div><span>LAUNCH AUTHORITY</span><b>GO only when DNS, HTTPS, core assets, live services, and rollback all pass.</b></div><a href="https://github.com/gavinlujan42-glitch/avanyu.cloud" target="_blank" rel="noopener">OPEN RELEASE REPOSITORY ↗</a></div>
     </section>
 
     <section id="trust" class="section trust-section">
